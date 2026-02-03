@@ -11,7 +11,7 @@ color:white;
 
         <!-- HEADER -->
         <div style="text-align:center;max-width:720px;margin:0 auto 64px">
-            <h1 style="font-size:48px;font-weight:800">
+            <h1 style="font-size:48px;font-weight:800" class="scroll-reveal">
                 Konsultasi Jasa Iklan
                 <span style="
           background:linear-gradient(135deg,var(--primary),var(--accent));
@@ -22,7 +22,7 @@ color:white;
           padding-right:0.1em;
         ">Performance Marketing</span>
             </h1>
-            <p style="color:rgba(255,255,255,.7)">
+            <p style="color:rgba(255,255,255,.7)" class="scroll-reveal delay-1">
                 Tim performance advertising agency kami siap menganalisis strategi Meta Ads, TikTok Ads, atau Shopee Ads
                 terbaik untuk bisnis Anda — gratis, tanpa komitmen.
             </p>
@@ -42,7 +42,7 @@ color:white;
       min-height:520px;
       display:flex;
       align-items:center;
-    ">
+    " class="scroll-reveal delay-2">
 
             <!-- FORM -->
             <form id="kontakForm" action="javascript:void(0)" style="
@@ -206,6 +206,9 @@ color:white;
             font-weight: 700;
             cursor: pointer;
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition:
                 transform .25s ease,
                 box-shadow .25s ease,
@@ -223,13 +226,17 @@ color:white;
         /* SPINNER */
         .spinner {
             display: none;
-            width: 20px;
-            height: 20px;
-            border: 2px solid rgba(255, 255, 255, .3);
-            border-top: 2px solid white;
+            width: 22px;
+            height: 22px;
+            border: 3px solid rgba(255, 255, 255, .3);
+            border-top: 3px solid white;
             border-radius: 50%;
             animation: spin 1s linear infinite;
             position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -11px;
+            margin-top: -11px;
         }
 
         button[data-state="loading"] .btn-text {
