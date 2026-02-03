@@ -66,6 +66,9 @@
         initScrollReveals();
     }
 
+    // Also run when dynamic content is loaded via include.js
+    document.addEventListener('includesLoaded', initScrollReveals);
+
     // Re-scan for new elements (in case content is dynamically loaded)
     window.refreshScrollReveals = initScrollReveals;
 
