@@ -1,0 +1,294 @@
+/* ========================================
+   STUDIOCSY GLOBAL DESIGN SYSTEM
+   Dark Blue Glassmorphism Theme
+   ======================================== */
+
+:root {
+    /* ========================================
+     COLOR PALETTE
+     ======================================== */
+
+    /* Backgrounds */
+    --bg-dark: #FFFFFF;
+    --bg-blue: #FFFFFF;
+    --bg-blue-light: #F8FAFC;
+
+    /* Primary Colors */
+    --primary-blue: #4A8BBE;
+    --accent-blue: #6FA3D8;
+    --electric-blue: #4A8BBE;
+
+    /* Text Colors */
+    --white-soft: rgba(255, 255, 255, 0.85);
+    --white-muted: rgba(255, 255, 255, 0.65);
+    --white-subtle: rgba(255, 255, 255, 0.45);
+
+    /* Glass Effects */
+    --glass-bg: rgba(74, 139, 190, 0.12);
+    --glass-bg-strong: rgba(74, 139, 190, 0.18);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-border-strong: rgba(255, 255, 255, 0.25);
+
+    /* Shadows & Glows */
+    --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --shadow-medium: 0 12px 48px rgba(0, 0, 0, 0.5);
+    --shadow-strong: 0 20px 60px rgba(0, 0, 0, 0.6);
+    --glow-blue: 0 0 30px rgba(74, 139, 190, 0.3);
+    --glow-blue-strong: 0 0 50px rgba(74, 139, 190, 0.5);
+
+    /* ========================================
+     SPACING
+     ======================================== */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+    --spacing-3xl: 6rem;
+
+    /* ========================================
+     BORDER RADIUS
+     ======================================== */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+
+    /* ========================================
+     TRANSITIONS
+     ======================================== */
+    --transition-fast: 200ms ease-out;
+    --transition-normal: 300ms ease-out;
+    --transition-slow: 400ms ease-out;
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* ========================================
+     TYPOGRAPHY
+     ======================================== */
+    --font-primary: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ========================================
+   GLOBAL TYPOGRAPHY
+   ======================================== */
+
+*,
+*::before,
+*::after {
+    font-family: var(--font-primary);
+}
+
+body,
+html {
+    font-family: var(--font-primary);
+    scroll-behavior: smooth;
+    font-weight: 400;
+}
+
+/* Heading hierarchy: weight 700-800 */
+h1 {
+    font-family: var(--font-primary);
+    font-weight: 800;
+}
+
+h2 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+}
+
+h3 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+}
+
+h4,
+h5,
+h6 {
+    font-family: var(--font-primary);
+    font-weight: 600;
+}
+
+/* Body text: weight 400-500 */
+p,
+span,
+li {
+    font-family: var(--font-primary);
+    font-weight: 400;
+}
+
+a {
+    font-family: var(--font-primary);
+    font-weight: 500;
+}
+
+label {
+    font-family: var(--font-primary);
+    font-weight: 500;
+}
+
+/* Button & CTA: weight 600 */
+button {
+    font-family: var(--font-primary);
+    font-weight: 600;
+}
+
+/* Input & Form elements */
+input,
+textarea,
+select {
+    font-family: var(--font-primary);
+    font-weight: 400;
+}
+
+/* ========================================
+   GLASSMORPHISM BASE CLASSES
+   ======================================== */
+
+.glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: var(--shadow-soft);
+}
+
+.glass-strong {
+    background: var(--glass-bg-strong);
+    border: 1px solid var(--glass-border-strong);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: var(--shadow-medium);
+}
+
+.glass-hover {
+    transition: all var(--transition-normal);
+}
+
+.glass-hover:hover {
+    border-color: var(--glass-border-strong);
+    box-shadow: var(--shadow-medium), var(--glow-blue);
+    transform: scale(1.02);
+}
+
+/* ========================================
+   GRADIENT BACKGROUNDS
+   ======================================== */
+
+.bg-gradient-dark {
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-blue) 50%, var(--bg-blue-light) 100%);
+}
+
+.bg-gradient-blue {
+    background: linear-gradient(135deg, var(--bg-blue) 0%, var(--bg-blue-light) 100%);
+}
+
+/* ========================================
+   GLOW EFFECTS
+   ======================================== */
+
+.glow-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(74, 139, 190, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(111, 163, 216, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ========================================
+   HOVER INTERACTIONS
+   ======================================== */
+
+.hover-lift {
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium), var(--glow-blue);
+}
+
+.hover-scale {
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.hover-glow {
+    transition: box-shadow var(--transition-normal), filter var(--transition-normal);
+}
+
+.hover-glow:hover {
+    box-shadow: var(--glow-blue-strong);
+    filter: brightness(1.1);
+}
+
+/* ========================================
+   TEXT UTILITIES
+   ======================================== */
+
+.text-soft {
+    color: var(--white-soft);
+}
+
+.text-muted {
+    color: var(--white-muted);
+}
+
+.text-subtle {
+    color: var(--white-subtle);
+}
+
+.text-gradient-blue {
+    background: linear-gradient(135deg, var(--electric-blue) 0%, var(--accent-blue) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ========================================
+   BUTTON UTILITIES
+   ======================================== */
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+    color: white;
+    padding: 12px 32px;
+    border-radius: var(--radius-full);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-soft), var(--glow-blue);
+}
+
+.btn-primary:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: var(--shadow-strong), var(--glow-blue-strong);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* ========================================
+   RESPONSIVE UTILITIES
+   ======================================== */
+
+@media (max-width: 768px) {
+    :root {
+        --spacing-xl: 2rem;
+        --spacing-2xl: 3rem;
+        --spacing-3xl: 4rem;
+    }
+}

@@ -1,0 +1,239 @@
+<section id="portofolio" style="
+  --bg-dark:#F1F5F9;
+  --bg-blue:#E2E8F0;
+  --primary:#4A8BBE;
+  --accent:#6FA3D8;
+  --white-soft:#0F172A;
+  background:radial-gradient(1200px 600px at 70% -10%, #E2E8F0, #F1F5F9);
+  color:var(--white-soft);
+  padding:clamp(3rem,6vw,6rem) 1.5rem;
+  font-family:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+">
+
+    <!-- TOP ROW -->
+    <div class="portfolio-top" style="
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:3rem;
+    align-items:center;
+  ">
+
+        <!-- LEFT -->
+        <div>
+            <h1 style="font-size:clamp(2rem,4vw,3rem);line-height:1.1;color:#0B1220">
+                Kenapa Video Menjadi<br> Senjata Utama Iklan?
+            </h1>
+
+            <p style="max-width:480px;opacity:.75;line-height:1.6;margin:1rem 0 1.8rem">
+                Video bukan sekadar branding, ini adalah engine utama iklan modern. Dari attention ke trust, lalu
+                conversion. Digunakan untuk testing, scaling, dan menemukan winning ads yang menurunkan CPA dan
+                meningkatkan ROAS.
+            </p>
+
+            <a href="https://wa.me/6281290091191" target="_blank" rel="noopener noreferrer"
+                class="portfolio-cta-btn">Audit Creative & Ads Gratis</a>
+        </div>
+
+        <!-- RIGHT : VIDEO GRID -->
+        <div class="video-grid">
+            <div class="video-item">
+                <video src="assets/portofolio/vid-01.mp4" controls playsinline preload="metadata"></video>
+            </div>
+            <div class="video-item">
+                <video src="assets/portofolio/vid-02.mp4" controls playsinline preload="metadata"></video>
+            </div>
+            <div class="video-item">
+                <video src="assets/portofolio/vid-03.mp4" controls playsinline preload="metadata"></video>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM : IMAGE ADS -->
+    <div style="max-width:1200px;margin:4rem auto 0">
+        <h3 style="font-size:1.4rem;margin-bottom:1.5rem;color:#0B1220">
+            Image Ads yang Sudah Diuji & Siap Scaling
+        </h3>
+
+        <div style="
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+      gap:1rem;
+    ">
+            <div class="ads-box"><img src="assets/portofolio/img-01.png"></div>
+            <div class="ads-box"><img src="assets/portofolio/img-02.png"></div>
+            <div class="ads-box"><img src="assets/portofolio/img-03.png"></div>
+            <div class="ads-box"><img src="assets/portofolio/img-04.png"></div>
+            <div class="ads-box"><img src="assets/portofolio/img-05.png"></div>
+            <div class="ads-box"><img src="assets/portofolio/img-06.png"></div>
+            <div class="ads-box"><img src="assets/portofolio/img-07.png"></div>
+            <div class="ads-box"><img src="assets/portofolio/img-08.png"></div>
+            <div class="ads-box"><img src="assets/portofolio/img-09.png"></div>
+            <div class="ads-box"><img src="assets/portofolio/img-10.png"></div>
+            <div class="ads-box"><img src="assets/portofolio/img-11.png"></div>
+            <div class="ads-box"><img src="assets/portofolio/img-12.png"></div>
+            <div class="ads-box"><img src="assets/portofolio/img-13.png"></div>
+            <div class="ads-box"><img src="assets/portofolio/img-14.png"></div>
+        </div>
+    </div>
+
+    <!-- STYLES -->
+    <style>
+        .portfolio-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-decoration: none;
+            background: var(--primary);
+            border: 1px solid transparent;
+            border-radius: 16px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow:
+                0 4px 24px rgba(74, 139, 190, 0.4),
+                0 8px 40px rgba(74, 139, 190, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.2),
+                    transparent);
+            transition: left 0.6s ease;
+        }
+
+        .portfolio-cta-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            padding: 1px;
+            background: linear-gradient(135deg,
+                    rgba(255, 255, 255, 0.3) 0%,
+                    rgba(255, 255, 255, 0) 50%,
+                    rgba(255, 255, 255, 0.1) 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .portfolio-cta-btn:hover::before {
+            left: 100%;
+        }
+
+        .portfolio-cta-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            background: var(--accent);
+            box-shadow:
+                0 0 50px rgba(111, 163, 216, 0.6),
+                0 0 100px rgba(111, 163, 216, 0.4),
+                0 12px 48px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        .portfolio-cta-btn:active {
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .video-item {
+            aspect-ratio: 3/4;
+            border-radius: 18px;
+            overflow: hidden;
+            background: #FFFFFF;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+            transition: .3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+        }
+
+        .video-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: black;
+        }
+
+        .ads-box {
+            aspect-ratio: 3/4;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #FFFFFF;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            transition: .3s ease;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+        }
+
+        .ads-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: linear-gradient(145deg, #1E293B, #0F172A);
+        }
+
+        .ads-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        @media(max-width:900px) {
+            .portfolio-top {
+                grid-template-columns: 1fr
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem
+            }
+        }
+    </style>
+
+    <!-- JS : VIDEO UX -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const videos = document.querySelectorAll('.video-item video');
+
+            videos.forEach(function (video) {
+                // Ensure video starts paused and unmuted
+                video.pause();
+                video.muted = false;
+
+                // Auto-pause other videos when one plays
+                video.addEventListener('play', function () {
+                    videos.forEach(function (v) {
+                        if (v !== video) v.pause();
+                    });
+                });
+            });
+        });
+    </script>
+
+</section>

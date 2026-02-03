@@ -1,0 +1,279 @@
+<section id="package-section" style="
+  --bg-dark:#0F172A;
+  --bg-blue:#1E293B;
+  --primary:#4A8BBE;
+  --accent:#6FA3D8;
+  --white-soft:rgba(255,255,255,.9);
+  background:
+    radial-gradient(900px 500px at 10% -10%, #1E3A5F, transparent),
+    radial-gradient(800px 400px at 90% 10%, #1E293B, transparent),
+    linear-gradient(180deg,#0F172A,#1E293B);
+  color:var(--white-soft);
+  padding:clamp(4rem,7vw,7rem) 1.5rem;
+  font-family:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+">
+
+    <div style="max-width:1200px;margin:0 auto">
+
+        <!-- HEADER -->
+        <div style="max-width:640px;margin-bottom:3.5rem">
+            <h1 style="
+        font-size:clamp(2.2rem,4vw,3.2rem);
+        line-height:1.1;
+        color:#FFFFFF;
+        margin-bottom:1rem;
+      ">
+                Paket Jasa Iklan Digital untuk Scale Bisnis Anda
+            </h1>
+
+            <p style="
+        opacity:.8;
+        line-height:1.7;
+        font-size:1.05rem;
+      ">
+                Pilih paket jasa iklan Meta Ads, TikTok Ads, atau Shopee Ads dari performance advertising agency
+                terpercaya di Indonesia untuk meningkatkan ROAS dan penjualan bisnis Anda.
+            </p>
+        </div>
+
+        <!-- PACKAGES -->
+        <div class="package-grid">
+
+            <!-- CARD 1 -->
+            <div class="package-card">
+                <h3>Jasa Meta Ads & TikTok Ads Management</h3>
+                <p class="desc">
+                    Layanan pengelolaan iklan Meta Ads dan TikTok Ads berbasis performa untuk meningkatkan konversi dan
+                    scale bisnis Anda.
+                </p>
+
+                <ul>
+                    <li>Meta Ads/TikTok Management/Shopee Ads</li>
+                    <li>Monthly report </li>
+                    <li>Campaign Monitoring</li>
+                </ul>
+
+                <a href="https://wa.me/6281290091191" target="_blank" rel="noopener noreferrer"
+                    class="btn primary">Konsultasi Sekarang</a>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="package-card highlight">
+                <h3>Jasa Shopee Ads & Marketplace Optimization</h3>
+                <p class="desc">
+                    Paket lengkap jasa Shopee Ads untuk optimasi katalog, CPAS, dan iklan marketplace yang meningkatkan
+                    penjualan toko Anda.
+                </p>
+
+                <ul>
+                    <li>Up to 20 Product / month</li>
+                    <li>Monthly report </li>
+                    <li>Campaign Monitoring</li>
+                    <li>Catalog Design & Branding</li>
+                </ul>
+
+                <a href="https://wa.me/6281290091191" target="_blank" rel="noopener noreferrer"
+                    class="btn primary">Konsultasi Sekarang</a>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="package-card">
+                <h3>Jasa Creative Ads untuk Meta & TikTok</h3>
+                <p class="desc">
+                    Produksi konten iklan kreatif untuk Meta Ads dan TikTok Ads yang dirancang untuk meningkatkan ROAS
+                    dan menurunkan CPA.
+                </p>
+
+                <ul>
+                    <li>6 Image Concept Creative</li>
+                    <li>6 Reels Concept Creative</li>
+                    <li>Monthly report</li>
+                    <li>1 Talent</li>
+                </ul>
+
+                <a href="https://wa.me/6281290091191" target="_blank" rel="noopener noreferrer"
+                    class="btn primary">Konsultasi Sekarang</a>
+            </div>
+
+        </div>
+
+        <!-- PROMO BANNER -->
+        <div style="text-align: center;">
+            <div class="promo-banner">
+                <span class="promo-label">Mulai Sekarang!</span>
+                <span class="promo-price">Starting from only <strong>Rp8.500.000</strong></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- STYLES -->
+    <style>
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+        }
+
+        .package-card {
+            padding: 2.2rem 2rem;
+            border-radius: 22px;
+            background:
+                linear-gradient(180deg, rgba(30, 58, 95, 0.6), rgba(15, 23, 42, 0.8));
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            transition: .35s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .package-card h3 {
+            font-size: 1.45rem;
+            color: #FFFFFF;
+        }
+
+        .package-card .desc {
+            opacity: .78;
+            line-height: 1.6;
+        }
+
+        .package-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: .6rem;
+            font-size: .95rem;
+        }
+
+        .package-card ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: .5rem;
+        }
+
+        .package-card ul li::before {
+            content: '✓';
+            color: var(--accent);
+        }
+
+        /* subtle highlight variation */
+        .package-card.highlight {
+            background:
+                linear-gradient(180deg, rgba(74, 139, 190, 0.3), rgba(30, 58, 95, 0.5));
+            outline: 1px solid rgba(111, 163, 216, .4);
+        }
+
+        /* hover microinteraction */
+        .package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 40px 85px rgba(0, 0, 0, .7);
+        }
+
+        /* button */
+        .btn {
+            margin-top: auto;
+            text-decoration: none;
+            text-align: center;
+            padding: .8rem 1.3rem;
+            border-radius: 999px;
+            font-weight: 600;
+            transition: .25s ease;
+            color: white;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            box-shadow: 0 12px 35px rgba(74, 139, 190, .45);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 45px rgba(74, 139, 190, .55);
+        }
+
+        /* MOBILE */
+        @media(max-width:900px) {
+            .package-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .package-card {
+                padding: 1.5rem;
+            }
+
+            .package-card h3 {
+                font-size: 18px;
+            }
+
+            .package-card p {
+                font-size: 13px;
+            }
+
+            .promo-banner {
+                flex-direction: column;
+                gap: .5rem;
+                padding: 1rem 1.2rem;
+                font-size: 14px;
+            }
+        }
+
+        /* PROMO BANNER */
+        .promo-banner {
+            margin: 3rem auto 0;
+            padding: 1.2rem 2.5rem;
+            background: linear-gradient(135deg, #4A8BBE, #6FA3D8);
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            box-shadow:
+                0 8px 32px rgba(74, 139, 190, 0.3),
+                0 0 0 1px rgba(111, 163, 216, 0.2);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            animation: bannerGlow 3s ease-in-out infinite;
+            cursor: default;
+        }
+
+        .promo-banner:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow:
+                0 12px 40px rgba(74, 139, 190, 0.4),
+                0 0 0 1px rgba(111, 163, 216, 0.3);
+        }
+
+        @keyframes bannerGlow {
+
+            0%,
+            100% {
+                box-shadow:
+                    0 8px 32px rgba(74, 139, 190, 0.3),
+                    0 0 0 1px rgba(111, 163, 216, 0.2);
+            }
+
+            50% {
+                box-shadow:
+                    0 8px 40px rgba(111, 163, 216, 0.45),
+                    0 0 0 1px rgba(111, 163, 216, 0.35);
+            }
+        }
+
+        .promo-label {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .promo-price {
+            color: white;
+            font-size: 1rem;
+        }
+
+        .promo-price strong {
+            font-weight: 700;
+            color: #ffffff;
+        }
+    </style>
+
+</section>

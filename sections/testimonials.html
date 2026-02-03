@@ -1,0 +1,317 @@
+<section id="testimonials" style="background:#F1F5F9; padding:120px 0; position:relative; overflow:hidden;">
+
+    <!-- glow -->
+    <div style="
+    position:absolute;
+    top:-200px;
+    left:50%;
+    transform:translateX(-50%);
+    width:600px;
+    height:600px;
+    background:rgba(74,139,190,0.08);
+    filter:blur(180px);
+    border-radius:50%;
+    pointer-events:none;">
+    </div>
+
+    <div style="max-width:1200px; margin:0 auto; padding:0 24px; position:relative; z-index:2;">
+
+        <!-- HEADER -->
+        <div style="text-align:center; max-width:720px; margin:0 auto 72px; padding: 0 16px;">
+            <h1 style="
+        font-size:clamp(28px,4vw,48px);
+        font-weight:800;
+        color:#0B1220;
+        line-height:1.1;
+        margin-bottom:16px;">
+                Testimoni Klien yang
+                <span style="
+          background:linear-gradient(90deg,#4A8BBE,#6FA3D8);
+          -webkit-background-clip:text;
+          background-clip:text;
+          color:transparent;
+          font-style:italic;
+          padding-right:0.1em;">
+                    Bertumbuh Nyata
+                </span>
+            </h1>
+
+            <p style="color:#64748B; font-size:16px; line-height:1.7;">
+                Bukti performa iklan dan creative yang berdampak langsung ke bisnis.
+            </p>
+        </div>
+
+        <!-- FADE -->
+        <div
+            style="position:absolute;left:0;top:0;width:80px;height:100%;background:linear-gradient(to right,#F1F5F9,transparent);pointer-events:none;z-index:5;">
+        </div>
+        <div
+            style="position:absolute;right:0;top:0;width:80px;height:100%;background:linear-gradient(to left,#F1F5F9,transparent);pointer-events:none;z-index:5;">
+        </div>
+
+        <!-- CAROUSEL WRAPPER -->
+        <div class="carousel-wrapper">
+            <!-- Left Arrow -->
+            <button class="carousel-arrow carousel-arrow-left" id="testimonial-prev" aria-label="Previous">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <!-- CAROUSEL -->
+            <div id="testimonial-carousel" class="testimonial-carousel">
+
+                <!-- CARD -->
+                <div class="testimonial-card">
+                    <div class="proof-img"><img src="assets/testimonials/angelo.webp" alt=""></div>
+                    <h3>Angelo Vilardo</h3>
+                    <span>Scaled in 20 weeks</span>
+                    <p>"We'd been stuck around a 1.5 ROAS on Meta for months. Two weeks in, their creative tests started
+                        landing and by week 8 we were at 4.0 ROAS with CPA down 38% on the same spend. The weekly ideas
+                        + relatable edits were the difference."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="proof-img"><img src="assets/testimonials/alex.webp" alt=""></div>
+                    <h3>Alex Philip</h3>
+                    <span>Scaled in 1 Month</span>
+                    <p>"Our UGC looked homemade and wasn't scaling. After that, CSYMedia rebuilt our hooks and angles
+                        with AI Influencer, click-through doubled and we finally got more profitable campaign running."
+                    </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="proof-img"><img src="assets/testimonials/joe.webp" alt=""></div>
+                    <h3>Joe Hume</h3>
+                    <span>Scaled in 3 Months</span>
+                    <p>"We were nervous to increase budget. They set a creative testing cadence and helped us push from
+                        $20k to $100k/mo while holding CPA under $30."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="proof-img"><img src="assets/testimonials/brent.webp" alt=""></div>
+                    <h3>Brent Swanson</h3>
+                    <span>Scaled in 2 months</span>
+                    <p>"Thanks so much for all your work we're super happy with the results. Booked time to plan next
+                        steps."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="proof-img"><img src="assets/testimonials/robin.webp" alt=""></div>
+                    <h3>Robin Rich</h3>
+                    <span>Scaled in 30 Days</span>
+                    <p>"30 days in, your creatives hit 3.54 ROAS and brought CPA down to $57.88 (we're usually around
+                        $130). Nicely done team."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="proof-img"><img src="assets/testimonials/satwant.webp" alt=""></div>
+                    <h3>Satwant Singgih</h3>
+                    <span>Scaled in 6 weeks</span>
+                    <p>"One clip drove 76 bookings and cut our cost by 50%. Excited to see how the rest scales."</p>
+                </div>
+
+            </div>
+
+            <!-- Right Arrow -->
+            <button class="carousel-arrow carousel-arrow-right" id="testimonial-next" aria-label="Next">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <p style="text-align:center; margin-top:24px; color:#64748B; font-size:14px;">
+            Gunakan panah atau geser untuk melihat →
+        </p>
+    </div>
+
+    <!-- CSS -->
+    <style>
+        /* CAROUSEL WRAPPER */
+        .carousel-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* CAROUSEL - Native Scroll */
+        .testimonial-carousel {
+            display: flex;
+            gap: 28px;
+            padding: 16px 24px 16px 8px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            flex: 1;
+        }
+
+        .testimonial-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* ARROW BUTTONS */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-arrow:hover {
+            background: linear-gradient(135deg, #4A8BBE, #6FA3D8);
+            border-color: transparent;
+            box-shadow: 0 8px 30px rgba(74, 139, 190, 0.3);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-arrow:hover svg {
+            stroke: #FFFFFF;
+        }
+
+        .carousel-arrow:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .carousel-arrow svg {
+            width: 24px;
+            height: 24px;
+            stroke: #0B1220;
+            transition: stroke 0.3s ease;
+        }
+
+        .carousel-arrow-left {
+            left: -24px;
+        }
+
+        .carousel-arrow-right {
+            right: -24px;
+        }
+
+        .testimonial-card {
+            min-width: 300px;
+            max-width: 340px;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            background: #FFFFFF;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            border-radius: 24px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: transform .35s ease, box-shadow .35s ease;
+            color: #0F172A;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(74, 139, 190, 0.15);
+        }
+
+        .proof-img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px dashed rgba(15, 23, 42, 0.2);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+
+        .proof-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .testimonial-card h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .testimonial-card span {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64748B;
+        }
+
+        .testimonial-card p {
+            margin-top: 14px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #334155;
+            font-style: italic;
+        }
+
+        @media(max-width:768px) {
+            .testimonial-carousel {
+                padding-right: 32px;
+                gap: 16px;
+            }
+
+            .testimonial-card {
+                min-width: 240px;
+                max-width: 280px;
+                padding: 16px;
+            }
+
+            .testimonial-card h3 {
+                font-size: 15px;
+            }
+
+            .testimonial-card span {
+                font-size: 10px;
+            }
+
+            .testimonial-card p {
+                font-size: 12px;
+                margin-top: 10px;
+            }
+
+            .proof-img {
+                margin-bottom: 12px;
+            }
+
+            /* Arrow adjustments for mobile */
+            .carousel-arrow {
+                width: 40px;
+                height: 40px;
+            }
+
+            .carousel-arrow svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .carousel-arrow-left {
+                left: -8px;
+            }
+
+            .carousel-arrow-right {
+                right: -8px;
+            }
+        }
+    </style>
+
+</section>

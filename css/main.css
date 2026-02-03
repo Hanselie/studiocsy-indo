@@ -1,0 +1,562 @@
+/* Tailwind CSS CDN - Remove this when using full Tailwind setup */
+@import url('https://cdn.tailwindcss.com');
+
+/* smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* gradient text multiline fix */
+.clip-fix {
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* glass base */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* autofill dark fix */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #0a0d13 inset;
+  -webkit-text-fill-color: #fff;
+}
+
+/* --- CSY Header --- */
+:root {
+  --csy-blue: #4A8BBE;
+  --csy-indigo: #6FA3D8;
+  --txt: #ffffff;
+  --muted: rgba(244, 244, 245, .85);
+}
+
+.csy-no-scroll {
+  overflow: hidden;
+}
+
+.csy-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+}
+
+.csy-nav {
+  position: relative;
+  z-index: 41;
+  border-bottom: 1px solid rgba(255, 255, 255, .10);
+  background: linear-gradient(90deg, rgba(0, 0, 0, .60), rgba(23, 37, 84, .40), rgba(0, 0, 0, .60));
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.csy-nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, .05);
+  pointer-events: none;
+}
+
+.csy-inner {
+  position: relative;
+  height: 80px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--txt);
+}
+
+.csy-logo {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-style: italic;
+  color: var(--txt);
+  text-decoration: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.csy-logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.csy-links {
+  display: none;
+  gap: 32px;
+  align-items: center;
+  align-self: stretch;
+}
+
+.csy-link {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(244, 244, 245, .75);
+  text-decoration: none;
+  transition: color .3s ease;
+  padding: 0;
+}
+
+.csy-link:hover {
+  color: var(--txt);
+}
+
+.csy-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #4A8BBE, var(--csy-indigo));
+  box-shadow: 0 0 12px rgba(74, 139, 190, .8);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .3s ease-out;
+  pointer-events: none;
+}
+
+.csy-link:hover::after,
+.csy-link.is-active::after {
+  transform: scaleX(1);
+}
+
+.csy-link.is-active {
+  color: var(--txt);
+}
+
+.csy-cta {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: #4A8BBE;
+  /* Accent blue like hero */
+  box-shadow:
+    0 4px 24px rgba(74, 139, 190, 0.4),
+    0 8px 40px rgba(74, 139, 190, 0.2);
+  transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+  white-space: nowrap;
+}
+
+.csy-cta:hover {
+  transform: scale(1.05) translateY(-2px);
+  background: #6FA3D8;
+  /* Hover state like hero */
+  box-shadow:
+    0 0 50px rgba(111, 163, 216, 0.6),
+    0 0 100px rgba(111, 163, 216, 0.4),
+    0 12px 48px rgba(0, 0, 0, 0.4);
+}
+
+.csy-cta:active {
+  transform: scale(.98) translateY(0);
+}
+
+.csy-cta-arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform .3s ease;
+}
+
+.csy-cta:hover .csy-cta-arrow {
+  transform: translateX(4px);
+}
+
+.csy-burger {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.csy-burger-line {
+  width: 22px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--muted);
+  transition: transform .25s ease, background .3s ease;
+}
+
+.csy-burger:hover .csy-burger-line {
+  background: #fff;
+}
+
+.csy-burger.is-open .csy-burger-line:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.csy-burger.is-open .csy-burger-line:nth-child(2) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+.csy-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .95);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .5s ease;
+}
+
+.csy-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.csy-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.csy-mobile a {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  transition: transform .3s ease, color .3s ease;
+  padding: 10px 16px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.csy-mobile a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.csy-mobile-cta {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 999px;
+  color: #fff !important;
+  background: #4A8BBE;
+  /* Accent blue like hero */
+  box-shadow:
+    0 8px 32px rgba(74, 139, 190, 0.4),
+    0 12px 48px rgba(74, 139, 190, 0.2);
+  transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+
+.csy-mobile-cta:hover {
+  transform: scale(1.05) translateY(-2px);
+  background: #6FA3D8;
+  /* Hover state like hero */
+  box-shadow:
+    0 0 50px rgba(111, 163, 216, 0.6),
+    0 0 100px rgba(111, 163, 216, 0.4),
+    0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.csy-mobile-cta:active {
+  transform: scale(.98) translateY(0);
+}
+
+.csy-header-spacer {
+  height: 80px;
+}
+
+@media (min-width: 768px) {
+  .csy-links {
+    display: flex;
+  }
+
+  .csy-cta {
+    display: inline-flex;
+  }
+
+  .csy-burger {
+    display: none;
+  }
+
+  .csy-overlay {
+    display: none;
+  }
+}
+
+/* -----------------------------
+   Brand Trust / Hero styles
+   Appended by Copilot: glassmorphism, responsive grid, micro-interactions
+   ----------------------------- */
+
+:root {
+  --primary-blue: #4A8BBE;
+  --primary-purple: #6FA3D8;
+  --accent-start: rgba(74, 139, 190, 0.12);
+  --accent-end: rgba(111, 163, 216, 0.10);
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.07);
+  --glass-strong: rgba(255, 255, 255, 0.12);
+  --text-soft: rgba(255, 255, 255, 0.94);
+  --muted-2: rgba(255, 255, 255, 0.46);
+  --transition: 420ms cubic-bezier(.2, .9, .2, 1);
+  --card-radius: 16px;
+  --glass-blur: 8px;
+}
+
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(ellipse at 10% 10%, rgba(74, 139, 190, 0.04), transparent 8%), radial-gradient(ellipse at 90% 80%, rgba(111, 163, 216, 0.03), transparent 12%);
+  mix-blend-mode: screen;
+}
+
+.brand-trust {
+  width: 100%;
+  max-width: 1200px;
+  margin: 28px auto;
+  padding: 36px;
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.005));
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+.brand-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.brand-trust .eyebrow {
+  display: block;
+  color: var(--muted-2);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.brand-trust h2 {
+  margin: 0 0 18px;
+  font-size: clamp(18px, 2.1vw, 28px);
+  color: var(--text-soft);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.cta-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.wa-btn {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 14px;
+  color: var(--text-soft);
+  text-decoration: none;
+  font-weight: 600;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 6px 20px rgba(11, 14, 35, 0.55);
+  backdrop-filter: blur(6px);
+  transition: transform 240ms cubic-bezier(.2, .9, .2, 1), box-shadow 240ms var(--transition);
+}
+
+.wa-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4A8BBE, #6FA3D8);
+  display: inline-grid;
+  place-items: center;
+  color: white;
+  font-weight: 700;
+  flex: 0 0 36px;
+  box-shadow: 0 6px 20px rgba(74, 139, 190, 0.18), 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.wa-btn:hover,
+.wa-btn:focus {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(74, 139, 190, 0.08), 0 6px 30px rgba(11, 14, 35, 0.6);
+}
+
+.brand-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 8px;
+  align-items: center;
+  justify-items: center;
+  padding: 12px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media(min-width:600px) {
+  .brand-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(min-width:900px) {
+  .brand-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media(min-width:1200px) {
+  .brand-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.brand-card {
+  width: 100%;
+  max-width: 160px;
+  padding: 16px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+  will-change: transform, box-shadow;
+  backdrop-filter: blur(var(--glass-blur));
+  cursor: pointer;
+}
+
+.brand-card:focus {
+  outline: none;
+  box-shadow: 0 10px 28px rgba(74, 139, 190, 0.06);
+  transform: translateY(-6px) scale(1.02);
+}
+
+.brand-logo {
+  width: 85%;
+  height: 46px;
+  opacity: 0.4;
+  filter: grayscale(30%) brightness(0.85) saturate(0.8);
+  transition: opacity var(--transition), filter var(--transition), transform var(--transition);
+  display: block;
+}
+
+.brand-card:hover,
+.brand-card.is-active {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.6), 0 10px 40px rgba(74, 139, 190, 0.06);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--glass-strong);
+}
+
+.brand-card:hover .brand-logo,
+.brand-card.is-active .brand-logo {
+  opacity: 1;
+  filter: none;
+  transform: translateY(-2px) scale(1.02);
+}
+
+.brand-card {
+  opacity: 0;
+  transform: translateY(6px) scale(0.99);
+  animation: popIn 700ms forwards;
+  animation-timing-function: cubic-bezier(.2, .9, .2, 1);
+}
+
+.brand-card:nth-child(1) {
+  animation-delay: 120ms
+}
+
+.brand-card:nth-child(2) {
+  animation-delay: 160ms
+}
+
+.brand-card:nth-child(3) {
+  animation-delay: 200ms
+}
+
+.brand-card:nth-child(4) {
+  animation-delay: 240ms
+}
+
+.brand-card:nth-child(5) {
+  animation-delay: 280ms
+}
+
+.brand-card:nth-child(6) {
+  animation-delay: 320ms
+}
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.brand-card:focus-visible {
+  box-shadow: 0 12px 30px rgba(74, 139, 190, 0.08), 0 6px 30px rgba(11, 14, 35, 0.6);
+  transform: translateY(-6px) scale(1.03);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0
+}
