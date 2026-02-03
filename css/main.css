@@ -4,6 +4,7 @@
 /* smooth scroll */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* gradient text multiline fix */
@@ -37,6 +38,11 @@ textarea:-webkit-autofill {
 
 .csy-no-scroll {
   overflow: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .csy-header {
