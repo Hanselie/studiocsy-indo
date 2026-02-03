@@ -71,3 +71,29 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 })();
+
+// Dynamic Tab Logo & Title
+(function () {
+  const originalTitle = document.title;
+  const originalFavicon = "assets/header/studiocsy_logo.jpeg";
+
+  function setFavicon(url) {
+    let link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'icon';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    link.href = url;
+  }
+
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      document.title = "Ayo balik ke StudioCSY! 👋";
+      // Optional: change favicon when inactive if needed
+    } else {
+      document.title = originalTitle;
+      setFavicon(originalFavicon);
+    }
+  });
+})();
