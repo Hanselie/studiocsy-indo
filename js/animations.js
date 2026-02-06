@@ -72,28 +72,15 @@
   onScroll();
 })();
 
-// Dynamic Tab Logo & Title
+// Dynamic Tab Title (Visibility Change)
 (function () {
   const originalTitle = document.title;
-  const originalFavicon = "assets/header/studiocsy_logo.jpeg";
-
-  function setFavicon(url) {
-    let link = document.querySelector("link[rel~='icon']");
-    if (!link) {
-      link = document.createElement('link');
-      link.rel = 'icon';
-      document.getElementsByTagName('head')[0].appendChild(link);
-    }
-    link.href = url;
-  }
 
   document.addEventListener("visibilitychange", function () {
     if (document.hidden) {
-      document.title = "Ayo balik ke StudioCSY! 👋";
-      // Optional: change favicon when inactive if needed
+      document.title = "StudioCSY adalah studio produksi kreatif yang spesialis dalam video iklan dengan konversi tinggi, materi kreatif statis, dan konten UGC untuk brand e-commerce. Tingkatkan ROAS Anda dengan visual yang menghentikan scroll.";
     } else {
       document.title = originalTitle;
-      setFavicon(originalFavicon);
     }
   });
 })();

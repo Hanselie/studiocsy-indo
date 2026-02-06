@@ -41,14 +41,14 @@
 
             <!-- CARD 1 -->
             <div class="package-card scroll-reveal delay-1">
-                <h3>Jasa Meta Ads & TikTok Ads Management</h3>
+                <h3>Meta Ads Management</h3>
                 <p class="desc">
                     Layanan pengelolaan iklan Meta Ads dan TikTok Ads berbasis performa untuk meningkatkan konversi dan
                     scale bisnis Anda.
                 </p>
 
                 <ul>
-                    <li>Meta Ads/TikTok Management/Shopee Ads</li>
+                    <li>Meta Ads Management</li>
                     <li>Monthly report </li>
                     <li>Campaign Monitoring</li>
                 </ul>
@@ -58,7 +58,7 @@
             </div>
 
             <!-- CARD 2 -->
-            <div class="package-card highlight scroll-reveal delay-2">
+            <!-- <div class="package-card highlight scroll-reveal delay-2">
                 <h3>Jasa Shopee Ads & Marketplace Optimization</h3>
                 <p class="desc">
                     Paket lengkap jasa Shopee Ads untuk optimasi katalog, CPAS, dan iklan marketplace yang meningkatkan
@@ -74,13 +74,13 @@
 
                 <a href="https://wa.me/6281290091191" target="_blank" rel="noopener noreferrer"
                     class="btn primary">Konsultasi Sekarang</a>
-            </div>
+            </div> -->
 
             <!-- CARD 3 -->
             <div class="package-card scroll-reveal delay-3">
-                <h3>Jasa Creative Ads untuk Meta & TikTok</h3>
+                <h3>Creative Advertising Content</h3>
                 <p class="desc">
-                    Produksi konten iklan kreatif untuk Meta Ads dan TikTok Ads yang dirancang untuk meningkatkan ROAS
+                    Produksi konten iklan kreatif yang dirancang untuk meningkatkan ROAS
                     dan menurunkan CPA.
                 </p>
 
@@ -109,9 +109,11 @@
     <!-- STYLES -->
     <style>
         .package-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 1.8rem;
+            margin: 0 auto;
         }
 
         .package-card {
@@ -126,6 +128,8 @@
             gap: 1.2rem;
             position: relative;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            flex: 1 1 350px;
+            max-width: 400px;
         }
 
         .package-card h3 {
@@ -200,6 +204,8 @@
 
             .package-card {
                 padding: 1.5rem;
+                flex: 1 1 100%;
+                max-width: none;
             }
 
             .package-card h3 {
