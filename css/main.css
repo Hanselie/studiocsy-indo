@@ -17,6 +17,14 @@ html {
   scroll-margin-top: 80px;
 }
 
+@media (max-width: 768px) {
+
+  #tentang-kami-section,
+  #layanan-section {
+    scroll-margin-top: 100px;
+  }
+}
+
 /* gradient text multiline fix */
 .clip-fix {
   box-decoration-break: clone;
