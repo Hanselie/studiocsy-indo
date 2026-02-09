@@ -27,8 +27,8 @@
   <meta name="twitter:title" content="Jasa Iklan Meta Ads & Creative Advertising Content | StudioCSY" />
   <meta name="twitter:description"
     content="Scale bisnis Anda bersama performance advertising agency melalui Meta Ads dan Creative Advertising Content." />
-  <meta property="og:image" content="https://www.studiocsy.id/assets/header/studiocsy_logo.png" />
-  <meta name="twitter:image" content="https://www.studiocsy.id/assets/header/studiocsy_logo.png" />
+  <meta property="og:image" content="https://www.studiocsy.id/assets/mobile-logo/og-image.png" />
+  <meta name="twitter:image" content="https://www.studiocsy.id/assets/mobile-logo/og-image.png" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,11 +40,19 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Favicons & Manifest -->
-  <link rel="icon" type="image/x-icon" href="/assets/header/studiocsy_logo.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/header/studiocsy_logo.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/header/studiocsy_logo.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/header/studiocsy_logo.png">
+  <link rel="icon" href="/assets/mobile-logo/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/mobile-logo/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/mobile-logo/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/mobile-logo/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#000000">
+
+  <!-- Disable PWA Install Prompt -->
+  <script>
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+    });
+  </script>
 
   <link rel="stylesheet" href="css/design-system.css" />
   <link rel="stylesheet" href="css/main.css" />
