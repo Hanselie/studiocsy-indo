@@ -320,7 +320,7 @@
             position: relative;
             width: 100%;
             aspect-ratio: 9 / 16;
-            height: clamp(580px, 70vh, 850px);
+            height: auto;
             border-radius: 22px;
             overflow: hidden;
             background: #FFFFFF;
@@ -350,6 +350,20 @@
             object-fit: cover;
             background: #000;
             pointer-events: auto;
+        }
+
+        /* Prevent video cropping when native fullscreen is activated */
+        .cinema-card__video video:fullscreen {
+            object-fit: contain !important;
+        }
+        .cinema-card__video video:-webkit-full-screen {
+            object-fit: contain !important;
+        }
+        .cinema-card__video video:-moz-full-screen {
+            object-fit: contain !important;
+        }
+        .cinema-card__video video:-ms-fullscreen {
+            object-fit: contain !important;
         }
 
         /* ============================================
@@ -461,10 +475,6 @@
                 gap: 1.2rem;
                 padding: 1.5rem 1rem;
             }
-
-            .cinema-card {
-                height: clamp(500px, 65vh, 750px);
-            }
         }
 
         /* ============================================
@@ -478,7 +488,6 @@
             }
 
             .cinema-card {
-                height: clamp(460px, 75vh, 680px);
                 border-radius: 18px;
             }
 
