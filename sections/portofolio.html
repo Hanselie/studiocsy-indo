@@ -6,7 +6,7 @@
   --white-soft:#0F172A;
   background:radial-gradient(1200px 600px at 70% -10%, #E2E8F0, #F1F5F9);
   color:var(--white-soft);
-  padding:clamp(3rem,6vw,6rem) 1.5rem;
+  padding:clamp(3rem,6vw,6rem) 0;
   font-family:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
 ">
 
@@ -19,6 +19,7 @@
     align-items:center;
     text-align:center;
     gap:3rem;
+    padding:0 1.5rem;
   ">
 
         <!-- LEFT -->
@@ -35,63 +36,147 @@
             </p>
 
             <a href="https://wa.me/6281290091191" target="_blank" rel="noopener noreferrer"
-                class="portfolio-cta-btn scroll-reveal delay-2">Audit Creative & Ads Gratis</a>
+                class="portfolio-cta-btn scroll-reveal delay-2">Audit Creative &amp; Ads Gratis</a>
         </div>
+    </div>
 
-        <!-- RIGHT : VIDEO GRID -->
-        <!-- Note: Replace these Cloudinary URLs with your own after uploading to https://cloudinary.com -->
-        <div class="video-grid">
-            <div class="video-item scroll-reveal delay-1">
-                <iframe src="https://player.cloudinary.com/embed/?cloud_name=do6dbbsp7&public_id=vid-01_naiddn"
-                    width="640" height="360" style="width: 100%; height: 100%; aspect-ratio: 9 / 16;"
-                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen
-                    frameborder="0"></iframe>
+    <!-- ============================================
+         CAROUSEL ROW 1 : Kelly Patricia
+         ============================================ -->
+    <div class="cinema-row scroll-reveal delay-1">
+        <div class="cinema-row__header">
+            <span class="cinema-row__label">CLIENT PROJECT</span>
+            <h2 class="cinema-row__title">Kelly Patricia</h2>
+        </div>
+        <div class="cinema-carousel" aria-label="Kelly Patricia video carousel" role="region">
+            <div class="cinema-track">
+                <div class="cinema-slide" data-index="0">
+                    <div class="cinema-card">
+                        <div class="cinema-card__video">
+                            <video src="https://res.cloudinary.com/do6dbbsp7/video/upload/v1781257850/Podcast_4___Clip_5_xsssiw.mp4"
+                                playsinline autoplay muted loop preload="metadata" controls
+                                title="Kelly Patricia video 1"></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="cinema-slide" data-index="1">
+                    <div class="cinema-card">
+                        <div class="cinema-card__video">
+                            <video src="https://res.cloudinary.com/do6dbbsp7/video/upload/v1781257524/Podcast_5___Clip_2_jox1zp.mp4"
+                                playsinline autoplay muted loop preload="metadata" controls
+                                title="Kelly Patricia video 2"></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="cinema-slide" data-index="2">
+                    <div class="cinema-card">
+                        <div class="cinema-card__video">
+                            <video src="https://res.cloudinary.com/do6dbbsp7/video/upload/v1781257505/Grind_Theory_Eps_1_v2_fxd2wl.mov"
+                                playsinline autoplay muted loop preload="metadata" controls
+                                title="Kelly Patricia video 3"></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="cinema-slide" data-index="3">
+                    <div class="cinema-card">
+                        <div class="cinema-card__video">
+                            <video src="https://res.cloudinary.com/do6dbbsp7/video/upload/v1781257497/Podcast_2___Clip_4_ng8ksp.mp4"
+                                playsinline autoplay muted loop preload="metadata" controls
+                                title="Kelly Patricia video 4"></video>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="video-item scroll-reveal delay-2">
-                <iframe src="https://player.cloudinary.com/embed/?cloud_name=do6dbbsp7&public_id=vid-03_rv1fzq"
-                    width="640" height="360" style="width: 100%; height: 100%; aspect-ratio: 9 / 16;"
-                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen
-                    frameborder="0"></iframe>
-            </div>
-            <div class="video-item scroll-reveal delay-3">
-                <iframe src="https://player.cloudinary.com/embed/?cloud_name=do6dbbsp7&public_id=vid-02_a1obwz"
-                    width="640" height="360" style="width: 100%; height: 100%; aspect-ratio: 9 / 16;"
-                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen
-                    frameborder="0"></iframe>
+
+            <!-- Navigation Arrows -->
+            <button class="cinema-nav cinema-nav--prev" aria-label="Video sebelumnya">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="cinema-nav cinema-nav--next" aria-label="Video berikutnya">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+            <!-- Dots & Progress -->
+            <div class="cinema-controls">
+                <div class="cinema-dots" role="tablist" aria-label="Video slides"></div>
+                <div class="cinema-progress">
+                    <div class="cinema-progress__fill"></div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- BOTTOM : IMAGE ADS -->
-    <div style="max-width:1200px;margin:4rem auto 0">
-        <h3 style="font-size:1.4rem;margin-bottom:1.5rem;color:#0B1220" class="scroll-reveal">
-            Image Ads yang Sudah Diuji & Siap Scaling
-        </h3>
+    <!-- ============================================
+         CAROUSEL ROW 2 : JH Interior
+         ============================================ -->
+    <div class="cinema-row scroll-reveal delay-2">
+        <div class="cinema-row__header">
+            <span class="cinema-row__label">CLIENT PROJECT</span>
+            <h2 class="cinema-row__title">JH Interior</h2>
+        </div>
+        <div class="cinema-carousel" aria-label="JH Interior video carousel" role="region">
+            <div class="cinema-track">
+                <div class="cinema-slide" data-index="0">
+                    <div class="cinema-card">
+                        <div class="cinema-card__video">
+                            <video src="https://res.cloudinary.com/do6dbbsp7/video/upload/v1781257437/Script_5_fbbwxi.mov"
+                                playsinline autoplay muted loop preload="metadata" controls
+                                title="JH Interior video 1"></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="cinema-slide" data-index="1">
+                    <div class="cinema-card">
+                        <div class="cinema-card__video">
+                            <video src="https://res.cloudinary.com/do6dbbsp7/video/upload/v1781257234/VO_2._3_lzlws4.mov"
+                                playsinline autoplay muted loop preload="metadata" controls
+                                title="JH Interior video 2"></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="cinema-slide" data-index="2">
+                    <div class="cinema-card">
+                        <div class="cinema-card__video">
+                            <video src="https://res.cloudinary.com/do6dbbsp7/video/upload/v1781257199/Script_3_VO_rjzkq8.mov"
+                                playsinline autoplay muted loop preload="metadata" controls
+                                title="JH Interior video 3"></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="cinema-slide" data-index="3">
+                    <div class="cinema-card">
+                        <div class="cinema-card__video">
+                            <video src="https://res.cloudinary.com/do6dbbsp7/video/upload/v1781257184/Script_1_HOOK_1_lwqqye.mov"
+                                playsinline autoplay muted loop preload="metadata" controls
+                                title="JH Interior video 4"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <div style="
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
-      gap:1rem;
-    " class="scroll-reveal delay-1">
-            <div class="ads-box"><img src="assets/portofolio/img-01.png"></div>
-            <div class="ads-box"><img src="assets/portofolio/img-02.png"></div>
-            <div class="ads-box"><img src="assets/portofolio/img-03.png"></div>
-            <div class="ads-box"><img src="assets/portofolio/img-04.png"></div>
-            <div class="ads-box"><img src="assets/portofolio/img-05.png"></div>
-            <div class="ads-box"><img src="assets/portofolio/img-06.png"></div>
-            <div class="ads-box"><img src="assets/portofolio/img-07.png"></div>
-            <div class="ads-box"><img src="assets/portofolio/img-08.png"></div>
-            <div class="ads-box"><img src="assets/portofolio/img-09.png"></div>
-            <div class="ads-box"><img src="assets/portofolio/img-10.png"></div>
-            <div class="ads-box"><img src="assets/portofolio/img-11.png"></div>
-            <div class="ads-box"><img src="assets/portofolio/img-12.png"></div>
-            <div class="ads-box"><img src="assets/portofolio/img-13.png"></div>
-            <div class="ads-box"><img src="assets/portofolio/img-14.png"></div>
+            <!-- Navigation Arrows -->
+            <button class="cinema-nav cinema-nav--prev" aria-label="Video sebelumnya">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="cinema-nav cinema-nav--next" aria-label="Video berikutnya">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+            <!-- Dots & Progress -->
+            <div class="cinema-controls">
+                <div class="cinema-dots" role="tablist" aria-label="Video slides"></div>
+                <div class="cinema-progress">
+                    <div class="cinema-progress__fill"></div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- STYLES -->
     <style>
+        /* ============================================
+           PORTFOLIO CTA BUTTON (PRESERVED)
+           ============================================ */
         .portfolio-cta-btn {
             display: inline-flex;
             align-items: center;
@@ -165,93 +250,289 @@
             transform: translateY(-2px) scale(1.02);
         }
 
-        .video-grid {
+        /* ============================================
+           CAROUSEL ROW — SECTION TITLE
+           ============================================ */
+        .cinema-row {
+            margin-top: clamp(3rem, 5vw, 5rem);
+            overflow: hidden; /* Prevent horizontal page overflow bugs from peeking slides */
+        }
+
+        .cinema-row + .cinema-row {
+            margin-top: clamp(4rem, 7vw, 7rem);
+        }
+
+        .cinema-row__header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem clamp(1.2rem, 2.5vw, 2rem);
+        }
+
+        .cinema-row__label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 0.4rem;
+            opacity: 0.85;
+        }
+
+        .cinema-row__title {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-weight: 700;
+            line-height: 1.15;
+            color: #0B1220;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+
+        /* ============================================
+           CINEMATIC CAROUSEL — LAYOUT
+           ============================================ */
+        .cinema-carousel {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 0.5rem 0 0;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .cinema-track {
             display: grid;
-            grid-template-columns: repeat(3, minmax(200px, 320px));
+            grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem;
-            justify-content: center;
-            align-items: start;
-            width: 100%;
+            padding: 2rem 1.5rem 3rem;
         }
 
-        .video-item {
-            aspect-ratio: 9/16;
-            min-height: 450px;
-            border-radius: 18px;
+        /* ============================================
+           SLIDE & CARD
+           ============================================ */
+        .cinema-slide {
+            width: 100%;
+            min-width: 0;
+            box-sizing: border-box;
+        }
+
+        .cinema-card {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            height: clamp(580px, 70vh, 850px);
+            border-radius: 22px;
             overflow: hidden;
             background: #FFFFFF;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
-            transition: .3s ease;
-            cursor: pointer;
-            border: 1px solid rgba(15, 23, 42, 0.08);
-        }
-
-        .video-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
-        }
-
-        .video-item video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            background: black;
-            display: block;
-            border: 0;
-        }
-
-        .video-item iframe {
-            width: 100%;
-            height: 100%;
-            display: block;
-            border: 0;
-        }
-
-        .ads-box {
-            aspect-ratio: 3/4;
-            border-radius: 14px;
-            overflow: hidden;
-            background: #FFFFFF;
+            border: 1px solid rgba(15, 23, 42, 0.06);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-            transition: .3s ease;
-            border: 1px solid rgba(15, 23, 42, 0.08);
+            transition:
+                transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                filter 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: transform, opacity, filter;
         }
 
-        .ads-box img {
+        .cinema-card__video {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            background: linear-gradient(145deg, #1E293B, #0F172A);
+            position: relative;
+            background: linear-gradient(145deg, #e2e8f0, #cbd5e1);
         }
 
-        .ads-box:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+        .cinema-card__video iframe,
+        .cinema-card__video video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border: 0;
+            object-fit: cover;
+            background: #000;
+            pointer-events: auto;
         }
 
-        @media(max-width:1100px) {
-            .portfolio-top {
-                grid-template-columns: 1fr
+        /* ============================================
+           DEPTH EFFECT — ACTIVE / ADJACENT / OUTER
+           ============================================ */
+
+        /* Default: outer cards */
+        .cinema-slide .cinema-card {
+            transform: none;
+            opacity: 1;
+        }
+
+        /* Adjacent cards (left/right of center) */
+        .cinema-slide.is-adjacent .cinema-card {
+            transform: none;
+            opacity: 1;
+        }
+
+        /* Active center card */
+        .cinema-slide.is-active .cinema-card {
+            transform: none;
+            opacity: 1;
+            z-index: 2;
+            border-color: rgba(74, 139, 190, 0.12);
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, 0.12),
+                0 10px 30px rgba(0, 0, 0, 0.08),
+                0 0 0 1px rgba(74, 139, 190, 0.06);
+        }
+
+        /* Hover on active card */
+        .cinema-slide.is-active .cinema-card:hover {
+            transform: scale(1) translateY(-6px);
+            box-shadow:
+                0 30px 70px rgba(0, 0, 0, 0.15),
+                0 15px 40px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(74, 139, 190, 0.1);
+        }
+
+        /* ============================================
+           NAVIGATION ARROWS
+           ============================================ */
+        .cinema-nav {
+            display: none !important;
+        }
+
+        .cinema-controls {
+            display: none !important;
+        }
+
+        .cinema-dots {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cinema-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(15, 23, 42, 0.15);
+            cursor: pointer;
+            padding: 0;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            outline: none;
+        }
+
+        .cinema-dot:hover {
+            background: rgba(74, 139, 190, 0.4);
+            transform: scale(1.3);
+        }
+
+        .cinema-dot.is-active {
+            width: 28px;
+            border-radius: 4px;
+            background: var(--primary);
+            box-shadow: 0 2px 8px rgba(74, 139, 190, 0.35);
+        }
+
+        .cinema-dot:focus-visible {
+            box-shadow: 0 0 0 3px rgba(74, 139, 190, 0.3);
+        }
+
+        .cinema-progress {
+            width: 100%;
+            max-width: 200px;
+            height: 3px;
+            background: rgba(15, 23, 42, 0.08);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .cinema-progress__fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+            width: 0%;
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ============================================
+           RESPONSIVE — TABLET
+           ============================================ */
+        @media (max-width: 1100px) {
+            .cinema-track {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.2rem;
+                padding: 1.5rem 1rem;
             }
 
-            .video-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .video-item {
-                min-height: 400px;
-                aspect-ratio: 9/16;
-                width: 100%;
-                max-width: 260px;
-                margin: 0 auto;
+            .cinema-card {
+                height: clamp(500px, 65vh, 750px);
             }
         }
 
-        @media(max-width:480px) {
-            .video-item {
-                min-height: 280px;
-                aspect-ratio: 9/16;
+        /* ============================================
+           RESPONSIVE — MOBILE
+           ============================================ */
+        @media (max-width: 600px) {
+            .cinema-track {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 1rem;
+                padding: 1rem 0.5rem;
+            }
+
+            .cinema-card {
+                height: clamp(460px, 75vh, 680px);
+                border-radius: 18px;
+            }
+
+            .cinema-row__header {
+                padding: 0 1.2rem clamp(1rem, 2vw, 1.5rem);
+            }
+
+            .cinema-row__title {
+                font-size: 1.4rem;
+            }
+
+            .cinema-nav {
+                width: 38px;
+                height: 38px;
+                top: auto;
+                bottom: 100px;
+                transform: none;
+            }
+
+            .cinema-nav--prev {
+                left: 12px;
+            }
+
+            .cinema-nav--next {
+                right: 12px;
+            }
+
+            .cinema-nav:hover {
+                transform: scale(1.05);
+            }
+
+            .cinema-nav:active {
+                transform: scale(0.95);
+            }
+
+            .cinema-slide.is-adjacent .cinema-card {
+                transform: scale(0.95);
+                opacity: 1;
+                filter: blur(1px);
+            }
+
+            .cinema-slide .cinema-card {
+                transform: scale(0.92) translateY(4px);
+                opacity: 1;
+            }
+
+            .cinema-slide.is-active .cinema-card {
+                transform: scale(1) translateY(-6px);
+            }
+
+            .cinema-slide.is-active .cinema-card:hover {
+                transform: scale(1) translateY(-8px);
             }
 
             .portfolio-cta-btn {
@@ -263,24 +544,371 @@
         }
     </style>
 
-    <!-- JS : VIDEO UX -->
+    <!-- JS : CINEMATIC CAROUSEL ENGINE (Multi-instance) -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const videos = document.querySelectorAll('.video-item video');
+        (function () {
+            'use strict';
 
-            videos.forEach(function (video) {
-                // Ensure video starts paused and unmuted
-                video.pause();
-                video.muted = false;
+            /**
+             * Initialize a single cinema carousel instance.
+             * Each .cinema-carousel on the page gets its own independent state.
+             */
+            function initSingleCarousel(carousel) {
+                return; // Disabled: Using CSS Grid layout statically to show all 4 cards side-by-side.
 
-                // Auto-pause other videos when one plays
-                video.addEventListener('play', function () {
-                    videos.forEach(function (v) {
-                        if (v !== video) v.pause();
+                function buildClones() {
+                    track.querySelectorAll('[data-clone]').forEach(function (c) { c.remove(); });
+
+                    for (var i = 0; i < clonesPerSide; i++) {
+                        var cloneEnd = originalSlides[i].cloneNode(true);
+                        cloneEnd.setAttribute('data-clone', 'true');
+                        cloneEnd.removeAttribute('data-index');
+                        track.appendChild(cloneEnd);
+
+                        var cloneStart = originalSlides[slideCount - 1 - i].cloneNode(true);
+                        cloneStart.setAttribute('data-clone', 'true');
+                        cloneStart.removeAttribute('data-index');
+                        track.insertBefore(cloneStart, track.firstChild);
+                    }
+
+                    allSlides = Array.from(track.querySelectorAll('.cinema-slide'));
+                    totalSlides = allSlides.length;
+                }
+
+                buildClones();
+
+                // --- State ---
+                // Start with slide 2 (index clonesPerSide + 1) centered so slides 1,2,3 are fully visible and slide 4 peeks on the right
+                var currentIndex = clonesPerSide + (slideCount >= 2 ? 1 : 0);
+                var slideWidth = 0;
+                var isDragging = false;
+                var startX = 0;
+                var startTranslate = 0;
+                var currentTranslate = 0;
+                var isTransitioning = false;
+                var dragThreshold = 50;
+
+                // --- Build dots ---
+                function buildDots() {
+                    if (!dotsContainer) return;
+                    dotsContainer.innerHTML = '';
+                    for (var i = 0; i < slideCount; i++) {
+                        var dot = document.createElement('button');
+                        var isInitialActive = (slideCount >= 2 ? i === 1 : i === 0);
+                        dot.className = 'cinema-dot' + (isInitialActive ? ' is-active' : '');
+                        dot.setAttribute('role', 'tab');
+                        dot.setAttribute('aria-label', 'Video ' + (i + 1));
+                        dot.setAttribute('data-dot', i);
+                        dot.addEventListener('click', (function (idx) {
+                            return function () { goToSlide(idx + clonesPerSide, true); };
+                        })(i));
+                        dotsContainer.appendChild(dot);
+                    }
+                }
+                buildDots();
+
+                // --- Measure ---
+                function measure() {
+                    if (allSlides.length === 0) return;
+                    slideWidth = allSlides[0].getBoundingClientRect().width;
+                }
+
+                // --- Position ---
+                function setPosition(translate, animate) {
+                    if (animate) {
+                        track.classList.remove('is-dragging');
+                    }
+                    track.style.transform = 'translate3d(' + translate + 'px, 0, 0)';
+                    currentTranslate = translate;
+                }
+
+                function getTranslateForIndex(idx) {
+                    var carouselWidth = carousel.getBoundingClientRect().width;
+                    var offset = (carouselWidth - slideWidth) / 2;
+                    return -(idx * slideWidth) + offset;
+                }
+
+                // --- Depth classes ---
+                function updateDepthClasses(idx) {
+                    allSlides.forEach(function (slide, i) {
+                        slide.classList.remove('is-active', 'is-adjacent', 'is-outer');
+                        var diff = Math.abs(i - idx);
+                        if (diff === 0) {
+                            slide.classList.add('is-active');
+                        } else if (diff === 1) {
+                            slide.classList.add('is-adjacent');
+                        }
+                    });
+                }
+
+                // --- Dots update ---
+                function updateDots(realIndex) {
+                    if (!dotsContainer) return;
+                    var dots = dotsContainer.querySelectorAll('.cinema-dot');
+                    dots.forEach(function (dot, i) {
+                        dot.classList.toggle('is-active', i === realIndex);
+                    });
+                }
+
+                // --- Progress ---
+                function updateProgress(realIndex) {
+                    if (!progressFill) return;
+                    var pct = ((realIndex + 1) / slideCount) * 100;
+                    progressFill.style.width = pct + '%';
+                }
+
+                // --- Go to slide ---
+                function goToSlide(idx, animate) {
+                    if (isTransitioning && animate) return;
+                    currentIndex = idx;
+                    measure();
+                    var translate = getTranslateForIndex(idx);
+
+                    if (animate) {
+                        isTransitioning = true;
+                    }
+
+                    setPosition(translate, animate);
+                    updateDepthClasses(idx);
+
+                    var realIndex = ((idx - clonesPerSide) % slideCount + slideCount) % slideCount;
+                    updateDots(realIndex);
+                    updateProgress(realIndex);
+                    updateLazyLoad(idx);
+                }
+
+                // --- Infinite loop snap ---
+                track.addEventListener('transitionend', function () {
+                    isTransitioning = false;
+
+                    if (currentIndex < clonesPerSide) {
+                        var jumpTo = currentIndex + slideCount;
+                        track.style.transition = 'none';
+                        currentIndex = jumpTo;
+                        setPosition(getTranslateForIndex(jumpTo), false);
+                        updateDepthClasses(jumpTo);
+                        track.offsetHeight; // force reflow
+                        track.style.transition = '';
+                    } else if (currentIndex >= clonesPerSide + slideCount) {
+                        var jumpTo = currentIndex - slideCount;
+                        track.style.transition = 'none';
+                        currentIndex = jumpTo;
+                        setPosition(getTranslateForIndex(jumpTo), false);
+                        updateDepthClasses(jumpTo);
+                        track.offsetHeight;
+                        track.style.transition = '';
+                    }
+                });
+
+                // --- Navigation ---
+                function goPrev() { goToSlide(currentIndex - 1, true); }
+                function goNext() { goToSlide(currentIndex + 1, true); }
+
+                if (prevBtn) prevBtn.addEventListener('click', function (e) { e.preventDefault(); goPrev(); });
+                if (nextBtn) nextBtn.addEventListener('click', function (e) { e.preventDefault(); goNext(); });
+
+                // --- Keyboard ---
+                carousel.setAttribute('tabindex', '0');
+                carousel.addEventListener('keydown', function (e) {
+                    if (e.key === 'ArrowLeft') { e.preventDefault(); goPrev(); }
+                    if (e.key === 'ArrowRight') { e.preventDefault(); goNext(); }
+                });
+
+                // --- Drag / Touch ---
+                var isDown = false;
+                var isDragging = false;
+                var startX = 0;
+                var startY = 0;
+                var startTranslate = 0;
+                var dragDirection = null;
+
+                function getClientX(e) {
+                    if (e.type.indexOf('touch') !== -1) {
+                        return e.touches && e.touches.length ? e.touches[0].clientX : (e.changedTouches && e.changedTouches.length ? e.changedTouches[0].clientX : 0);
+                    }
+                    return e.clientX;
+                }
+
+                function getClientY(e) {
+                    if (e.type.indexOf('touch') !== -1) {
+                        return e.touches && e.touches.length ? e.touches[0].clientY : (e.changedTouches && e.changedTouches.length ? e.changedTouches[0].clientY : 0);
+                    }
+                    return e.clientY;
+                }
+
+                function onDragStart(e) {
+                    if (e.target.closest('.cinema-nav') || e.target.closest('.cinema-dot')) return;
+                    isDown = true;
+                    isDragging = false;
+                    dragDirection = null;
+                    startX = getClientX(e);
+                    startY = getClientY(e);
+                    startTranslate = currentTranslate;
+                }
+
+                function onDragMove(e) {
+                    if (!isDown) return;
+                    var x = getClientX(e);
+                    var y = getClientY(e);
+                    var diffX = x - startX;
+                    var diffY = y - startY;
+
+                    if (!dragDirection) {
+                        if (Math.abs(diffX) > 5 || Math.abs(diffY) > 5) {
+                            if (Math.abs(diffX) > Math.abs(diffY)) {
+                                dragDirection = 'horizontal';
+                            } else {
+                                dragDirection = 'vertical';
+                                isDown = false; // vertical page scroll
+                            }
+                        }
+                    }
+
+                    if (dragDirection === 'horizontal') {
+                        if (!isDragging && Math.abs(diffX) > 8) {
+                            isDragging = true;
+                            track.classList.add('is-dragging');
+                        }
+                        if (isDragging) {
+                            if (e.cancelable) e.preventDefault();
+                            setPosition(startTranslate + diffX, false);
+                        }
+                    }
+                }
+
+                function onDragEnd(e) {
+                    if (!isDown) return;
+                    isDown = false;
+
+                    if (isDragging) {
+                        isDragging = false;
+                        track.classList.remove('is-dragging');
+
+                        var x = getClientX(e);
+                        var diff = x - startX;
+
+                        if (Math.abs(diff) > dragThreshold) {
+                            diff > 0 ? goPrev() : goNext();
+                        } else {
+                            goToSlide(currentIndex, true);
+                        }
+                    }
+                }
+
+                carousel.addEventListener('mousedown', onDragStart, { passive: false });
+                carousel.addEventListener('mousemove', onDragMove, { passive: false });
+                carousel.addEventListener('mouseup', onDragEnd);
+                carousel.addEventListener('mouseleave', function (e) {
+                    if (isDown) onDragEnd(e);
+                });
+
+                carousel.addEventListener('touchstart', onDragStart, { passive: true });
+                carousel.addEventListener('touchmove', onDragMove, { passive: false });
+                carousel.addEventListener('touchend', onDragEnd);
+
+                // --- Horizontal wheel ---
+                var wheelTimeout = null;
+                carousel.addEventListener('wheel', function (e) {
+                    var delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+                    if (Math.abs(delta) < 10) return;
+                    e.preventDefault();
+                    if (wheelTimeout) return;
+
+                    delta > 0 ? goNext() : goPrev();
+                    wheelTimeout = setTimeout(function () { wheelTimeout = null; }, 600);
+                }, { passive: false });
+
+                // --- Video click / tap control ---
+                allSlides.forEach(function (slide) {
+                    var video = slide.querySelector('video');
+                    if (!video) return;
+
+                    video.addEventListener('click', function (e) {
+                        var rect = video.getBoundingClientRect();
+                        var clickY = e.clientY - rect.top;
+
+                        // bottom 20% contains native controls
+                        if (clickY > rect.height * 0.8) {
+                            return;
+                        }
+
+                        // Toggle play/pause & unmute on body click
+                        if (video.muted) {
+                            video.muted = false;
+                            if (video.paused) {
+                                video.play().catch(function () {});
+                            }
+                        } else {
+                            if (video.paused) {
+                                video.play().catch(function () {});
+                            } else {
+                                video.pause();
+                            }
+                        }
                     });
                 });
+
+                // --- Video autoplay for active slide ---
+                function updateLazyLoad(idx) {
+                    allSlides.forEach(function (slide, i) {
+                        var video = slide.querySelector('video');
+                        if (!video) return;
+                        var diff = Math.abs(i - idx);
+                        if (diff === 0) {
+                            video.muted = true; // Autoplay is always muted
+                            video.play().catch(function () {});
+                        } else {
+                            video.pause();
+                            video.muted = true; // Reset offscreen videos to muted
+                        }
+                    });
+                }
+
+                // --- Resize ---
+                var resizeTimer = null;
+                window.addEventListener('resize', function () {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(function () {
+                        measure();
+                        setPosition(getTranslateForIndex(currentIndex), false);
+                        updateDepthClasses(currentIndex);
+                    }, 150);
+                });
+
+                // --- Init ---
+                measure();
+                goToSlide(currentIndex, false);
+
+                requestAnimationFrame(function () {
+                    measure();
+                    goToSlide(currentIndex, false);
+                });
+            }
+
+            /**
+             * Find and initialize ALL .cinema-carousel instances on the page.
+             */
+            function initAllCarousels() {
+                var carousels = document.querySelectorAll('.cinema-carousel');
+                carousels.forEach(function (c) {
+                    initSingleCarousel(c);
+                });
+            }
+
+            // Initialize after includes are loaded
+            document.addEventListener('includesLoaded', function () {
+                setTimeout(initAllCarousels, 80);
             });
-        });
+
+            // Fallback
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function () {
+                    setTimeout(initAllCarousels, 200);
+                });
+            } else {
+                setTimeout(initAllCarousels, 200);
+            }
+        })();
     </script>
 
 </section>
