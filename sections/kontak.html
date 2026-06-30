@@ -166,11 +166,38 @@ color:white;
             border: 1px solid rgba(255, 255, 255, .15);
             background: rgba(0, 0, 0, .25);
             color: white;
-            transition: border-color 0.25s ease;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(74, 139, 190, .2);
+        }
+
+        /* Override browser autofill styles (Chrome forces white/light bg) */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, .25) inset, 0 0 0 3px rgba(74, 139, 190, 0) !important;
+            -webkit-text-fill-color: white !important;
+            border-color: rgba(255, 255, 255, .15) !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+
+        input:-webkit-autofill:focus {
+            border-color: var(--accent) !important;
+            -webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, .25) inset, 0 0 0 3px rgba(74, 139, 190, .2) !important;
         }
 
         input.input-error {
             border-color: #ef4444;
+        }
+
+        input.input-error:-webkit-autofill {
+            border-color: #ef4444 !important;
         }
 
         input::placeholder {

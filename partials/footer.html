@@ -36,22 +36,6 @@
                 </nav>
             </div>
 
-            <!-- PAKET LAYANAN -->
-            <div class="footer-col">
-                <h4 class="footer-heading">Paket Layanan</h4>
-
-                <div class="footer-service-groups">
-
-                    <div class="service-group">
-                        <a href="#package-section" class="service-title">Advertising Content</a>
-                    </div>
-
-                    <div class="service-group">
-                        <a href="#package-section" class="service-title">Meta Ads Management</a>
-                    </div>
-
-                </div>
-            </div>
 
             <!-- KONTAK -->
             <div class="footer-col">
@@ -126,8 +110,9 @@
             max-width: 1200px;
             margin: auto;
             display: grid;
-            grid-template-columns: 1.6fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 56px;
+            align-items: start;
         }
 
         .footer-brand {
@@ -299,11 +284,8 @@
 
         @media(max-width:900px) {
             .footer-container {
-                grid-template-columns: 1fr 1fr
-            }
-
-            .footer-brand-col {
-                grid-column: span 2
+                grid-template-columns: 1fr;
+                gap: 36px;
             }
         }
 
